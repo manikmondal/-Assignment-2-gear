@@ -1,0 +1,153 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* common styles or utilities */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color: #FFFFFF;
+    width: 870px;
+    padding: 30PX;
+    /* border-radius: 5px; */
+    /* margin-top: 21px; */
+}
+
+
+/*------------------
+ top products style
+ -------------------- */
+
+.section-title{
+    color: #562EFF;
+    font-size: 24px;
+}
+
+.products-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+}
+.products-main img{
+    width: 80%;
+}
+
+
+.link-button{
+    text-decoration: none;
+    background-image: linear-gradient(red,rgb(243, 88, 114));
+    padding: 10px 40px;
+    color: white;
+    font-weight: 700;
+    border-radius: 20px;
+}
+.end{
+    text-align: end;
+}
+.link-end{
+    color: orangered;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* --------------------
+      product style 
+----------------------*/
+
+
+.section-title{
+    text-align: center;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    border-radius: 10px;
+    
+}
+
+.product{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgb(214, 214, 214);
+}
+
+.product .product-banner img{
+    margin-top: 10px;
+    width: 224px;
+    height: 224px;
+}
+.product-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-duration{
+    background-color: goldenrod;
+    border-radius: 40%;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.footer {
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(19, 6, 6);
+    color: white;
+    text-align: center;
+  }
+
+/* .........................
+    Media Queries
+    ................. */
+
+    /* ----------------
+    Mobile Devices 
+    ------------------- */
+
+ @media only screen and (max-width:688px) {
+     .container{
+         width: 100%;
+     }
+     .products-main, .products{
+         grid-template-columns: repeat(1,1fr);
+     }   
+     .products-main, .product{
+         flex-direction: column;
+     }
+     
+    }
+
+    /* -------------------
+    Tablet devices
+    --------------------- */
+
+    @media only screen and (min-width:688px) and (max-width:992px){
+        .container{
+            width: 100%;
+        }
+        .products-main, .products{
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        .products-main,.product, .blog{
+            flex-direction: column;
+        }
+    }
